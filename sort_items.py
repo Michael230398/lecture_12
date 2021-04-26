@@ -71,6 +71,12 @@ def bubble_sort(number_array):
        :param number_array: (list,int), list with numeric array
        :return: (list, int), sorted numeric array
     """
+    n= len(number_array)
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+            if number_array[j] > number_array[j+1]:
+                number_array[j], number_array[j+1] = number_array[j+1], number_array[j]
+    return number_array
 
 
 
@@ -89,6 +95,8 @@ def main():
     print(rows)
 
     # Ukol: Bubble Sort
+    output = bubble_sort(rows)
+    print(output)
 
 
     # příklad výpisu hodnot seřazené řady
